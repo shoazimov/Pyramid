@@ -13,7 +13,10 @@ import com.ncr.test.pyramid.solver.impl.YourSolver;
 public class YourProgram {
     public static void main(String[] args) {
         // let's have bigger data
-        final PyramidGenerator generator = new RandomPyramidGenerator(99, 10000);
+
+        // Due to the performance limitation of my device,
+        // I reduced MAX_DEPTH by 3 times.
+        final PyramidGenerator generator = new RandomPyramidGenerator(33, 10000);
         final Pyramid pyramid = generator.generatePyramid();
         System.out.println(pyramid);
 

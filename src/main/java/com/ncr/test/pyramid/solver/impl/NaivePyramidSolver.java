@@ -12,6 +12,10 @@ public class NaivePyramidSolver implements PyramidSolver {
         return getTotalAbove(pyramid.getRows() - 1, 0, pyramid);
     }
 
+    /**
+     * @param row should be subtracted by 1 once only at the beginning of recursion, not twice.
+     * otherwise the last row (N) will not be calculated in the recursion
+     */
     private long getTotalAbove(int row, int column, Pyramid pyramid) {
         if (row == 0) return 0;
 
